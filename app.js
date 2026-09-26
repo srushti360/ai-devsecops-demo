@@ -10,7 +10,7 @@ app.get("/", (req, res) => {
 app.get("/search", (req, res) => {
     const query = req.query.q;
 
-    res.send(`You searched for: ${query}`);
+    res.type("text/plain").send(`You searched for: ${query}`);
 });
 
 app.listen(PORT, () => {
